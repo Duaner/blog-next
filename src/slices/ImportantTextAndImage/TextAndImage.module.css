@@ -1,0 +1,41 @@
+.container {
+    display: flex;
+    align-items: center;
+    margin-top: 100px;
+    margin-bottom: 100px;
+  }
+  
+  .text {
+    width: 66%;
+    border-top: solid 1px red;
+    padding-top: 40px;
+    font-size: 2.25rem;
+    line-height: 2.6rem;
+  }
+  
+  .image {
+    margin-left: 60px;
+    max-width: 33%;
+    height: auto;
+  }
+  
+  /* Mobile styles */
+  @media (max-width: 768px) {
+    .container {
+      flex-direction: column;
+      margin : 40px 0 0 0;
+    }
+  
+    .text, .image {
+      max-width: 100%;
+      margin: 0 60px;
+      display: block;
+      margin-top: 60px;
+    }
+  
+    .text {
+      font-size: 1.5rem; /* Adjust font size for mobile if necessary */
+      line-height: 2rem; /* Adjust line height for mobile if necessary */
+    }
+  }
+  

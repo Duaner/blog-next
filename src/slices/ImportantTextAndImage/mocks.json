@@ -1,0 +1,66 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"text_outlined": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Officia voluptate non nostrud cillum elit eu consequat nulla nostrud aliquip Lorem. Pariatur esse sunt Lorem cupidatat."
+						}
+					}
+				]
+			},
+			"illustration": {
+				"__TYPE__": "ImageContent",
+				"origin": {
+					"id": "main",
+					"url": "https://images.unsplash.com/photo-1589321578146-4c1ba445cc88",
+					"width": 3168,
+					"height": 4752
+				},
+				"url": "https://images.unsplash.com/photo-1589321578146-4c1ba445cc88?rect=502%2C0%2C2165%2C4752&w=820&h=1800",
+				"width": 820,
+				"height": 1800,
+				"edit": {
+					"zoom": 1,
+					"crop": {
+						"x": 502,
+						"y": 0
+					},
+					"background": "transparent"
+				},
+				"thumbnails": {
+					"Mobile": {
+						"origin": {
+							"id": "Mobile",
+							"url": "https://images.unsplash.com/photo-1607582278038-6bebbd4d7b72",
+							"width": 4010,
+							"height": 4010
+						},
+						"url": "https://images.unsplash.com/photo-1607582278038-6bebbd4d7b72?rect=0%2C0%2C4010%2C4010&w=820&h=820",
+						"width": 820,
+						"height": 820,
+						"edit": {
+							"zoom": 1,
+							"crop": {
+								"x": 0,
+								"y": 0
+							},
+							"background": "transparent"
+						}
+					}
+				}
+			}
+		},
+		"items": [
+			{
+				"__TYPE__": "GroupItemContent",
+				"value": []
+			}
+		]
+	}
+]

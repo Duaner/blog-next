@@ -1,0 +1,13 @@
+.container {
+    margin-left: 34%;
+    width: 66%;
+  }
+  
+  /* Mobile styles */
+  @media (max-width: 768px) {
+    .container {
+      margin-left: 0;
+      width: 100%;
+      padding: 0 15px; /* Optional padding for better spacing on mobile */
+    }
+  }

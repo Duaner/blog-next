@@ -1,0 +1,65 @@
+[
+  {
+    "uid": {
+      "__TYPE__": "UIDContent",
+      "value": "tree"
+    },
+    "cover_image": {
+      "__TYPE__": "ImageContent",
+      "origin": {
+        "id": "main",
+        "url": "https://images.unsplash.com/photo-1515378791036-0648a3ef77b2",
+        "width": 5616,
+        "height": 3744
+      },
+      "url": "https://images.unsplash.com/photo-1515378791036-0648a3ef77b2",
+      "width": 5616,
+      "height": 3744,
+      "edit": {
+        "zoom": 1,
+        "crop": {
+          "x": 0,
+          "y": 0
+        },
+        "background": "transparent"
+      },
+      "thumbnails": {}
+    },
+    "title": {
+      "__TYPE__": "StructuredTextContent",
+      "value": [
+        {
+          "type": "heading1",
+          "content": {
+            "text": "Knowledge"
+          }
+        }
+      ]
+    },
+    "subtitle": {
+      "__TYPE__": "StructuredTextContent",
+      "value": [
+        {
+          "type": "heading2",
+          "content": {
+            "text": "Steady"
+          }
+        }
+      ]
+    },
+    "body": {
+      "__TYPE__": "SliceContentType",
+      "value": []
+    },
+    "background_color": {
+      "__TYPE__": "FieldContent",
+      "value": "#eacf20",
+      "type": "Color"
+    },
+    "secondary_color": {
+      "__TYPE__": "FieldContent",
+      "value": "#184839",
+      "type": "Color"
+    }
+  }
+]

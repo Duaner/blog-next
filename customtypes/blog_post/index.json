@@ -1,0 +1,98 @@
+{
+  "id": "blog_post",
+  "label": "blog_post",
+  "repeatable": true,
+  "hash": "682b11aa5a5620192d0ee2887c69b54d",
+  "status": true,
+  "format": "page",
+  "json": {
+    "Main": {
+      "uid": {
+        "type": "UID",
+        "config": {
+          "label": "uid"
+        }
+      },
+      "cover_image": {
+        "type": "Image",
+        "config": {
+          "constraint": {},
+          "thumbnails": [],
+          "label": "Cover_image"
+        }
+      },
+      "title": {
+        "type": "StructuredText",
+        "config": {
+          "single": "heading1",
+          "label": "Title"
+        }
+      },
+      "subtitle": {
+        "type": "StructuredText",
+        "config": {
+          "single": "heading2",
+          "label": "Sub-title"
+        }
+      },
+      "body": {
+        "type": "Slices",
+        "fieldset": "Slice Zone",
+        "config": {
+          "choices": {
+            "text": {
+              "type": "SharedSlice"
+            },
+            "image": {
+              "type": "SharedSlice"
+            },
+            "important_text_and_image": {
+              "type": "SharedSlice"
+            },
+            "title___text": {
+              "type": "Slice",
+              "fieldset": "Title & Text",
+              "description": "Left Title & Right Text",
+              "icon": "looks_two",
+              "display": "list",
+              "non-repeat": {
+                "title_left": {
+                  "type": "StructuredText",
+                  "config": {
+                    "single": "heading1,heading2,heading3,heading4,heading5,heading6",
+                    "label": "Title Left"
+                  }
+                },
+                "paragraph": {
+                  "type": "StructuredText",
+                  "config": {
+                    "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,o-list-item",
+                    "label": "Paragraph"
+                  }
+                }
+              },
+              "repeat": {}
+            },
+            "title_and_text": {
+              "type": "SharedSlice"
+            }
+          }
+        }
+      }
+    },
+    "Metadata": {
+      "background_color": {
+        "type": "Color",
+        "config": {
+          "label": "Background Color"
+        }
+      },
+      "secondary_color": {
+        "type": "Color",
+        "config": {
+          "label": "Secondary Color"
+        }
+      }
+    }
+  }
+}
