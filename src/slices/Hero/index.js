@@ -16,7 +16,7 @@ const Hero = ({ slice }) => {
       data-slice-variation={slice.variation}
     >
       <PrismicNextImage  field={slice.primary.coverimage} style={{
-           marginBottom: '20px'
+           marginBottom: '20px', display:'block', height:'auto'
          }} />
       <PrismicRichText field={slice.primary.title} components={RTcomp} />
       <PrismicRichText field={slice.primary.subtitle} components={RTcomp} />

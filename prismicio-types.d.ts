@@ -39,11 +39,12 @@ export type BlogPostDocumentDataBodyTitleTextSlice = prismic.Slice<
 >;
 
 type BlogPostDocumentDataBodySlice =
+  | BlogPostDocumentDataBodyTitleTextSlice
   | TextSlice
   | ImageSlice
   | ImportantTextAndImageSlice
-  | BlogPostDocumentDataBodyTitleTextSlice
-  | TitleAndTextSlice;
+  | TitleAndTextSlice
+  | HeroSlice;
 
 /**
  * Content for blog_post documents
