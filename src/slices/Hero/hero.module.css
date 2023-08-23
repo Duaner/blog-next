@@ -1,0 +1,59 @@
+.container {
+    margin: 0 auto;
+    max-width: 960px;
+    padding: 0px 1.0875rem 1.45rem;
+  }
+  
+  .title {
+    font-size: 70px;
+    font-family: 'SFProDisplay-Heavy';
+    color: #1A1919;
+    letter-spacing: 0;
+    line-height: 77px;
+    width: 80%;
+  }
+  
+  .dateIntro {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 20px;
+    margin-top: 40px;
+  }
+  
+  .date {
+    color: inherit; /* This will inherit the color from the inline style */
+    font-size: 20px;
+    flex-grow: 1;
+    width: 33%;
+    padding-right: 40px;
+  }
+  
+  .subtitle {
+    font-weight: normal;
+    font-size: 1.15rem;
+    color: #1A1919;
+    width: 66%;
+    line-height: 1.55;
+    margin-bottom: 0;
+  }
+  
+  .bodyBlog {
+    /* You can add styles specific to the blog content here if needed */
+  }
+  
+  /* Mobile styles */
+  @media (max-width: 768px) {
+    .container {
+      padding: 0 15px;
+    }
+  
+    .title {
+      font-size: 40px; /* Adjust font size for mobile if necessary */
+      line-height: 45px; /* Adjust line height for mobile if necessary */
+    }
+  
+    .date, .subtitle {
+      width: 100%;
+    }
+  }
+  

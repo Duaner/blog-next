@@ -196,34 +196,66 @@ export type PageDocument<Lang extends string = string> =
 export type AllDocumentTypes = BlogPostDocument | PageDocument;
 
 /**
- * Default variation for BaseSlice Slice
+ * Primary content in *Hero → Primary*
+ */
+export interface HeroSliceDefaultPrimary {
+  /**
+   * CoverImage field in *Hero → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: hero.primary.coverimage
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  coverimage: prismic.ImageField<never>;
+
+  /**
+   * Title field in *Hero → Primary*
+   *
+   * - **Field Type**: Title
+   * - **Placeholder**: Running during Lockdown, ahzhaeaz
+   * - **API ID Path**: hero.primary.title
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  title: prismic.TitleField;
+
+  /**
+   * SubTitle field in *Hero → Primary*
+   *
+   * - **Field Type**: Title
+   * - **Placeholder**: I tried to create a running app to advocate the fact that runners should not go out for a run.
+   * - **API ID Path**: hero.primary.subtitle
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  subtitle: prismic.TitleField;
+}
+
+/**
+ * Default variation for Hero Slice
  *
  * - **API ID**: `default`
  * - **Description**: Default
  * - **Documentation**: https://prismic.io/docs/slice
  */
-export type BaseSliceSliceDefault = prismic.SharedSliceVariation<
+export type HeroSliceDefault = prismic.SharedSliceVariation<
   "default",
-  Record<string, never>,
+  Simplify<HeroSliceDefaultPrimary>,
   never
 >;
 
 /**
- * Slice variation for *BaseSlice*
+ * Slice variation for *Hero*
  */
-type BaseSliceSliceVariation = BaseSliceSliceDefault;
+type HeroSliceVariation = HeroSliceDefault;
 
 /**
- * BaseSlice Shared Slice
+ * Hero Shared Slice
  *
- * - **API ID**: `base_slice`
- * - **Description**: BaseSlice
+ * - **API ID**: `hero`
+ * - **Description**: Hero
  * - **Documentation**: https://prismic.io/docs/slice
  */
-export type BaseSliceSlice = prismic.SharedSlice<
-  "base_slice",
-  BaseSliceSliceVariation
->;
+export type HeroSlice = prismic.SharedSlice<"hero", HeroSliceVariation>;
 
 /**
  * Primary content in *Image → Primary*
@@ -330,51 +362,6 @@ type ImportantTextAndImageSliceVariation = ImportantTextAndImageSliceDefault;
 export type ImportantTextAndImageSlice = prismic.SharedSlice<
   "important_text_and_image",
   ImportantTextAndImageSliceVariation
->;
-
-/**
- * Primary content in *TestSlice → Primary*
- */
-export interface TestSliceSliceDefaultPrimary {
-  /**
-   * RichText field in *TestSlice → Primary*
-   *
-   * - **Field Type**: Rich Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: test_slice.primary.richtext
-   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
-   */
-  richtext: prismic.RichTextField;
-}
-
-/**
- * Default variation for TestSlice Slice
- *
- * - **API ID**: `default`
- * - **Description**: Default
- * - **Documentation**: https://prismic.io/docs/slice
- */
-export type TestSliceSliceDefault = prismic.SharedSliceVariation<
-  "default",
-  Simplify<TestSliceSliceDefaultPrimary>,
-  never
->;
-
-/**
- * Slice variation for *TestSlice*
- */
-type TestSliceSliceVariation = TestSliceSliceDefault;
-
-/**
- * TestSlice Shared Slice
- *
- * - **API ID**: `test_slice`
- * - **Description**: TestSlice
- * - **Documentation**: https://prismic.io/docs/slice
- */
-export type TestSliceSlice = prismic.SharedSlice<
-  "test_slice",
-  TestSliceSliceVariation
 >;
 
 /**
@@ -491,18 +478,15 @@ declare module "@prismicio/client" {
       PageDocumentData,
       PageDocumentDataSlicesSlice,
       AllDocumentTypes,
-      BaseSliceSlice,
-      BaseSliceSliceVariation,
-      BaseSliceSliceDefault,
+      HeroSlice,
+      HeroSliceVariation,
+      HeroSliceDefault,
       ImageSlice,
       ImageSliceVariation,
       ImageSliceDefault,
       ImportantTextAndImageSlice,
       ImportantTextAndImageSliceVariation,
       ImportantTextAndImageSliceDefault,
-      TestSliceSlice,
-      TestSliceSliceVariation,
-      TestSliceSliceDefault,
       TextSlice,
       TextSliceVariation,
       TextSliceDefault,
