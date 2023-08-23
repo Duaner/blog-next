@@ -112,3 +112,8 @@
     line-height: 1.7rem;
     margin: 0 0 1.45rem;
 }
+
+img{
+  display: block;
+  width: 100%;
+}
