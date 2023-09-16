@@ -40,30 +40,6 @@
         "fieldset": "Slice Zone",
         "config": {
           "choices": {
-            "title___text": {
-              "type": "Slice",
-              "fieldset": "Title & Text",
-              "description": "Left Title & Right Text",
-              "icon": "looks_two",
-              "display": "list",
-              "non-repeat": {
-                "title_left": {
-                  "type": "StructuredText",
-                  "config": {
-                    "single": "heading1,heading2,heading3,heading4,heading5,heading6",
-                    "label": "Title Left"
-                  }
-                },
-                "paragraph": {
-                  "type": "StructuredText",
-                  "config": {
-                    "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,o-list-item",
-                    "label": "Paragraph"
-                  }
-                }
-              },
-              "repeat": {}
-            },
             "text": {
               "type": "SharedSlice"
             },

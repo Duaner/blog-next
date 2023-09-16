@@ -8,6 +8,7 @@ export default function Home() {
         <p>
           Get started by editing&nbsp;
           <code className={styles.code}>src/app/page.js</code>
+          <a href='/my-url'>My url</a>
         </p>
         <div>
           <a
