@@ -4,42 +4,7 @@ import type * as prismic from "@prismicio/client";
 
 type Simplify<T> = { [KeyType in keyof T]: T[KeyType] };
 
-/**
- * Primary content in *blog_post → Slice Zone → Title & Text → Primary*
- */
-export interface BlogPostDocumentDataBodyTitleTextSlicePrimary {
-  /**
-   * Title Left field in *blog_post → Slice Zone → Title & Text → Primary*
-   *
-   * - **Field Type**: Title
-   * - **Placeholder**: *None*
-   * - **API ID Path**: blog_post.body[].title___text.primary.title_left
-   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
-   */
-  title_left: prismic.TitleField;
-
-  /**
-   * Paragraph field in *blog_post → Slice Zone → Title & Text → Primary*
-   *
-   * - **Field Type**: Rich Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: blog_post.body[].title___text.primary.paragraph
-   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
-   */
-  paragraph: prismic.RichTextField;
-}
-
-/**
- * Slice for *blog_post → Slice Zone*
- */
-export type BlogPostDocumentDataBodyTitleTextSlice = prismic.Slice<
-  "title___text",
-  Simplify<BlogPostDocumentDataBodyTitleTextSlicePrimary>,
-  never
->;
-
 type BlogPostDocumentDataBodySlice =
-  | BlogPostDocumentDataBodyTitleTextSlice
   | TextSlice
   | ImageSlice
   | ImportantTextAndImageSlice
@@ -114,6 +79,17 @@ interface BlogPostDocumentData {
    * - **Documentation**: https://prismic.io/docs/field#color
    */
   secondary_color: prismic.ColorField;
+
+  /**
+   * FontColor field in *blog_post*
+   *
+   * - **Field Type**: Color
+   * - **Placeholder**: *None*
+   * - **API ID Path**: blog_post.fontcolor
+   * - **Tab**: Metadata
+   * - **Documentation**: https://prismic.io/docs/field#color
+   */
+  fontcolor: prismic.ColorField;
 }
 
 /**
@@ -412,7 +388,6 @@ declare module "@prismicio/client" {
     export type {
       BlogPostDocument,
       BlogPostDocumentData,
-      BlogPostDocumentDataBodyTitleTextSlicePrimary,
       BlogPostDocumentDataBodySlice,
       AllDocumentTypes,
       HeroSlice,
