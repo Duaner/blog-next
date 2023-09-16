@@ -57,3 +57,19 @@
     }
   }
   
+    /* Mobile styles */
+    @media (max-width: 768px) {
+      .dateIntro {
+        flex-direction: column;
+      }
+    
+      .date, .subtitle {
+        width: 100%;
+      }
+    
+      .title {
+        font-size: 40px; /* Adjust font size for mobile if necessary */
+        line-height: 40px; /* Adjust line height for mobile if necessary */
+      }
+    }
+  

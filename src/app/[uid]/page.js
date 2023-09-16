@@ -14,10 +14,11 @@ export default async function Page({ params }) {
     .getByUID("blog_post", params.uid)
     .catch(() => notFound());
   return (
-    <div id="blog-main"  className={styles.blogmain}>
-      <SliceZone slices={page.data.body} components={components} />;
+    <div>
+      <div id="blog-main"  className={styles.blogmain}>
+        <SliceZone slices={page.data.body} components={components} context={{"date":page.first_publication_date, "secondary_color":page.data.secondary_color}} />;
+      </div>
     </div>
-
   );
 }
 

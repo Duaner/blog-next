@@ -1,8 +1,9 @@
 import React from 'react'
-import { PrismicRichText } from '@prismicio/react'
+import styles from './Image.module.css'; // Assuming you have a CSS module for this component
+
 
 const Image = ({ slice }) => (
-  <section>
+  <section className={styles.image}>
     <img src={slice.primary.image.url} alt={slice.primary.image.alt} />
   </section>
 )

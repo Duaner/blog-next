@@ -12,6 +12,10 @@
     font-size: 2.25rem;
     line-height: 2.6rem;
   }
+
+  .text p{
+    line-height: 2.3rem;
+  }
   
   .image {
     margin-left: 60px;

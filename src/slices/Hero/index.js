@@ -7,20 +7,33 @@
 import { PrismicNextImage } from '@prismicio/next'
 import { PrismicRichText } from '@prismicio/react'
 import styles from './hero.module.css'; // Replace 'YourComponentName' with the actual name of your component
+import Moment from "moment";
 
 
-const Hero = ({ slice }) => {
+const Hero = ({ slice, context }) => {
+  const secondaryColor = context.secondary_color;
+  const formattedDate = Moment(context.first_publication_date).format("LL");
+
   return (
     <section className={styles.container}
       data-slice-type={slice.slice_type}
       data-slice-variation={slice.variation}
     >
+
+
       <PrismicNextImage  field={slice.primary.coverimage} style={{
            marginBottom: '20px', display:'block', height:'auto'
          }} />
       <PrismicRichText field={slice.primary.title} components={RTcomp} />
-      <PrismicRichText field={slice.primary.subtitle} components={RTcomp} />
-      Placeholder component for hero (variation: {slice.variation}) Slices
+
+      <div id="date-and-intro" className={styles.dateIntro}>
+        <p id="date" className={styles.date}style={{
+            color: secondaryColor
+        }}>
+            {formattedDate}
+        </p>
+        <div className={styles.subtitle}><PrismicRichText field={slice.primary.subtitle} components={RTcomp} /></div>
+      </div>
     </section>
   );
 };
