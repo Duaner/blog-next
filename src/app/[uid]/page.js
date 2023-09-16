@@ -14,7 +14,8 @@ export default async function Page({ params }) {
     .getByUID("blog_post", params.uid)
     .catch(() => notFound());
   return (
-    <div>
+    <div className={styles.LayoutContainer}>
+      <div id="bg-color" className={styles.bgColor} style={{background : page.data.background_color}}></div>
       <div id="blog-main"  className={styles.blogmain}>
         <SliceZone slices={page.data.body} components={components} context={{"date":page.first_publication_date, "secondary_color":page.data.secondary_color}} />;
       </div>

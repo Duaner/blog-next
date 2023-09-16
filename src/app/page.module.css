@@ -1,3 +1,16 @@
+.LayoutContainer{
+  position: relative;
+}
+
+.bgColor{
+  position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: -100000;
+    height: 100%;
+}
+
 .blogmain{
   max-width: 960px;
   margin: 0 auto;
