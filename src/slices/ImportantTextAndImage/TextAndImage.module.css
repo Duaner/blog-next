@@ -38,6 +38,8 @@
     }
   
     .text {
+      width: 90%;
+      display: block;
       font-size: 1.5rem; /* Adjust font size for mobile if necessary */
       line-height: 2rem; /* Adjust line height for mobile if necessary */
     }

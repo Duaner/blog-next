@@ -58,6 +58,9 @@
   
     /* Mobile styles */
     @media (max-width: 768px) {
+      .container{
+        padding: 0 20px;
+      }
       .dateIntro {
         flex-direction: column;
       }
