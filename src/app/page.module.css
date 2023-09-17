@@ -4,11 +4,15 @@
 
 .bgColor{
   position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: -100000;
-    height: 100%;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: -100000;
+  height: 100%;
+  -webkit-transition: background-color 0.6s ease-out;
+  -moz-transition: background-color 0.6s ease-out;
+  -o-transition: background-color 0.6s ease-out;
+  transition: background-color 0.6s ease-out;
 }
 
 .blogmain{
