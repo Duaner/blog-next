@@ -34,7 +34,6 @@ export default function ListBlogHome(blogs) {
   return(
     <main className={styles.LayoutContainer}>
       <div id="bg-color" ref={bgColorRef} className={styles.bgColor} style={{background: backgroundFirstPost }}></div>
-      <div>Hello</div>
       {allBlogs.map(function(blog, index){
         console.log("blogData",blog)
         return(

@@ -1,5 +1,7 @@
 .LayoutContainer{
   position: relative;
+  margin: 0;
+  padding: 50px 0;
 }
 
 .bgColor{
