@@ -13,7 +13,7 @@ const Blogpost = (data) => {
     return(
         <article className={styles.LayoutContainer} style={{color: textColor}} data-bg-color={bgColor} >
             <div id="blog-main"  className={styles.blogmain}>
-                <SliceZone slices={page.data.body} components={components} context={{"date":page.first_publication_date, "secondary_color":page.data.secondary_color}} />;
+                <SliceZone slices={page.data.body} components={components} context={{"date":page.first_publication_date, "secondary_color":page.data.secondary_color}} />
             </div>
         </article>
     )
