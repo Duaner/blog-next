@@ -16,39 +16,6 @@ type BlogPostDocumentDataBodySlice =
  */
 interface BlogPostDocumentData {
   /**
-   * Cover_image field in *blog_post*
-   *
-   * - **Field Type**: Image
-   * - **Placeholder**: *None*
-   * - **API ID Path**: blog_post.cover_image
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#image
-   */
-  cover_image: prismic.ImageField<never>;
-
-  /**
-   * Title field in *blog_post*
-   *
-   * - **Field Type**: Title
-   * - **Placeholder**: *None*
-   * - **API ID Path**: blog_post.title
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
-   */
-  title: prismic.TitleField;
-
-  /**
-   * Sub-title field in *blog_post*
-   *
-   * - **Field Type**: Title
-   * - **Placeholder**: *None*
-   * - **API ID Path**: blog_post.subtitle
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
-   */
-  subtitle: prismic.TitleField;
-
-  /**
    * Slice Zone field in *blog_post*
    *
    * - **Field Type**: Slice Zone

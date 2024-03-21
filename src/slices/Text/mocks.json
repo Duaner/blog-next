@@ -7,39 +7,9 @@
 				"__TYPE__": "StructuredTextContent",
 				"value": [
 					{
-						"type": "heading1",
-						"content": {
-							"text": "Believed"
-						}
-					},
-					{
 						"type": "paragraph",
 						"content": {
-							"text": "Ut nostrud eu velit id nisi ut. Ex Lorem amet ex id eiusmod est. Aliquip esse consequat voluptate in sit duis aliqua nulla."
-						}
-					},
-					{
-						"type": "heading1",
-						"content": {
-							"text": "Period"
-						}
-					},
-					{
-						"type": "paragraph",
-						"content": {
-							"text": "Esse magna non sunt nisi culpa non. Aute pariatur ad id do sunt elit do nostrud ex. Magna sunt amet reprehenderit exercitation id quis sit in nisi culpa in aliqua."
-						}
-					},
-					{
-						"type": "heading1",
-						"content": {
-							"text": "Particular"
-						}
-					},
-					{
-						"type": "paragraph",
-						"content": {
-							"text": "Commodo nisi non elit ea non mollit Lorem aute tempor anim sint ea laborum."
+							"text": "Laboris nostrud esse Lorem laboris."
 						}
 					}
 				]

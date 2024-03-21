@@ -19,7 +19,6 @@ export default async function Page({ params }) {
   const allBlogs = await client.getAllByType("blog_post");
   return (
     <ListBlogHome blogs={allBlogs}></ListBlogHome>
-    
   );
 }
 

@@ -3,8 +3,8 @@
 import styles from "../app/page.module.css";
 import Blogpost from './blogPost';
 import { useEffect, useRef, createRef } from 'react';
+import Heading from "./Heading"; 
 
- 
 export default function ListBlogHome(blogs) {
 
   const bgColorRef = useRef(null);
@@ -33,6 +33,8 @@ export default function ListBlogHome(blogs) {
 
   return(
     <main className={styles.LayoutContainer}>
+            <Heading></Heading>
+
       <div id="bg-color" ref={bgColorRef} className={styles.bgColor} style={{background: backgroundFirstPost }}></div>
       {allBlogs.map(function(blog, index){
         console.log("blogData",blog)

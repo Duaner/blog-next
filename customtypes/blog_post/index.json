@@ -13,28 +13,6 @@
           "label": "uid"
         }
       },
-      "cover_image": {
-        "type": "Image",
-        "config": {
-          "constraint": {},
-          "thumbnails": [],
-          "label": "Cover_image"
-        }
-      },
-      "title": {
-        "type": "StructuredText",
-        "config": {
-          "single": "heading1",
-          "label": "Title"
-        }
-      },
-      "subtitle": {
-        "type": "StructuredText",
-        "config": {
-          "single": "heading2",
-          "label": "Sub-title"
-        }
-      },
       "body": {
         "type": "Slices",
         "fieldset": "Slice Zone",
