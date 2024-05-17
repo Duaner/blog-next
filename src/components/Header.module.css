@@ -9,14 +9,12 @@
 
 .leftHeader, .rightHeader {
   font-size: 14px;
-  font-family: "SFProDisplay-Bold";
   letter-spacing: 0.3px;
 }
 
 .h1Style {
   margin: 0;
   font-size: 14px;
-  font-family: "SFProDisplay-Bold";
   letter-spacing: 0.3px;
   line-height: 14px;
 }
@@ -30,7 +28,6 @@
   line-height: 14px;
   font-size: 14px;
   margin-top: 5px;
-  font-family: "SFProDisplay-Bold";
 }
 
 .externalLink {
@@ -39,13 +36,11 @@
 }
 
 .productStyle {
-  font-family: "SFProDisplay-Bold";
   margin: 0;
   line-height: 14px;
 }
 
 .twitterLinkedInStyle {
-  font-family: "SFProDisplay-Light";
   margin: 0;
   line-height: 14px;
   margin-top: 5px;
