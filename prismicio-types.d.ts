@@ -24,8 +24,7 @@ interface BlogPostDocumentData {
    * - **Tab**: Main
    * - **Documentation**: https://prismic.io/docs/field#slices
    */
-  body: prismic.SliceZone<BlogPostDocumentDataBodySlice>
-  /**
+  body: prismic.SliceZone<BlogPostDocumentDataBodySlice> /**
    * Background Color field in *blog_post*
    *
    * - **Field Type**: Color
@@ -90,8 +89,7 @@ interface HomepageDocumentData {
    * - **Tab**: Main
    * - **Documentation**: https://prismic.io/docs/field#slices
    */
-  slices: prismic.SliceZone<HomepageDocumentDataSlicesSlice>
-  /**
+  slices: prismic.SliceZone<HomepageDocumentDataSlicesSlice> /**
    * Meta Description field in *Homepage*
    *
    * - **Field Type**: Text
@@ -142,6 +140,33 @@ export type HomepageDocument<Lang extends string = string> =
   >;
 
 export type AllDocumentTypes = BlogPostDocument | HomepageDocument;
+
+/**
+ * Default variation for Book Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type BookSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Record<string, never>,
+  never
+>;
+
+/**
+ * Slice variation for *Book*
+ */
+type BookSliceVariation = BookSliceDefault;
+
+/**
+ * Book Shared Slice
+ *
+ * - **API ID**: `book`
+ * - **Description**: Book
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type BookSlice = prismic.SharedSlice<"book", BookSliceVariation>;
 
 /**
  * Primary content in *Hero → Primary*
@@ -413,7 +438,7 @@ declare module "@prismicio/client" {
   interface CreateClient {
     (
       repositoryNameOrEndpoint: string,
-      options?: prismic.ClientConfig
+      options?: prismic.ClientConfig,
     ): prismic.Client<AllDocumentTypes>;
   }
 
@@ -426,6 +451,9 @@ declare module "@prismicio/client" {
       HomepageDocumentData,
       HomepageDocumentDataSlicesSlice,
       AllDocumentTypes,
+      BookSlice,
+      BookSliceVariation,
+      BookSliceDefault,
       HeroSlice,
       HeroSliceDefaultPrimary,
       HeroSliceVariation,
