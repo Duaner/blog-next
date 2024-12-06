@@ -14,10 +14,11 @@
   }
   
   .title h2 {
-    font-size: 80px;
-    letter-spacing: 0;
-    line-height: 1.1;
+    font-size: 40px;
+    letter-spacing: -2px;
+    line-height: 1.15;
     font-weight: 200;
+    padding-right: 30px;
   }
   
   .textRight {
@@ -36,9 +37,10 @@
     }
   
     .title {
-      font-size: 40px; /* Adjust font size for mobile if necessary */
+      font-size: 20px; /* Adjust font size for mobile if necessary */
       line-height: 40px; /* Adjust line height for mobile if necessary */
       margin-bottom: 20px;
+      padding-right: 0;
     }
   }
   

@@ -19,8 +19,6 @@ const Hero = ({ slice, context }) => {
       data-slice-type={slice.slice_type}
       data-slice-variation={slice.variation}
     >
-
-
       <PrismicNextImage  field={slice.primary.coverimage} style={{
            marginBottom: '20px', display:'block', height:'auto'
          }} />
