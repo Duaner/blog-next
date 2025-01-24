@@ -2,7 +2,6 @@
   "id": "blog_post",
   "label": "blog_post",
   "repeatable": true,
-  "hash": "682b11aa5a5620192d0ee2887c69b54d",
   "status": true,
   "format": "page",
   "json": {
@@ -37,7 +36,7 @@
         }
       }
     },
-    "Metadata": {
+    "Metadata & SEO": {
       "background_color": {
         "type": "Color",
         "config": {
@@ -56,6 +55,31 @@
           "label": "FontColor",
           "placeholder": ""
         }
+      },
+      "meta_title": {
+        "config": {
+          "label": "Meta Title",
+          "placeholder": "A title of the page used for social media and search engines"
+        },
+        "type": "Text"
+      },
+      "meta_description": {
+        "config": {
+          "label": "Meta Description",
+          "placeholder": "A brief summary of the page"
+        },
+        "type": "Text"
+      },
+      "meta_image": {
+        "config": {
+          "constraint": {
+            "height": 1260,
+            "width": 2400
+          },
+          "label": "Meta Image",
+          "thumbnails": []
+        },
+        "type": "Image"
       }
     }
   }

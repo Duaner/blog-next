@@ -30,7 +30,7 @@ const Hero = ({ slice, context }) => {
         }}>
             {formattedDate}
         </p>
-        <div className={styles.subtitle}><PrismicRichText field={slice.primary.subtitle} components={RTcomp} /></div>
+        <div className={styles.subtitle} style={{ color: secondaryColor }}><PrismicRichText field={slice.primary.subtitle} components={RTcomp} /></div>
       </div>
     </section>
   );
@@ -43,6 +43,6 @@ const RTcomp = {
    <h1 className={styles.title}>{children}</h1>
   ),
   heading2: ({ node, children }) => (
-    <h2 className={styles.subtitle}>{children}</h2>
+    <h2 className={styles.h2subtitle}>{children}</h2>
   ),
 }

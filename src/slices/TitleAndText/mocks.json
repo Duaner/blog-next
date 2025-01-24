@@ -22,42 +22,8 @@
 					{
 						"type": "paragraph",
 						"content": {
-							"text": "Last Sunday, I was spending my day like most of the people scrolling to my Facebook feed, and after a new report about those runners, I decided to do something about it. My thinking was, \"Can I provide some value to those runners for them to download an app that will teach them afterward what is the impact of COVID19 in France?\"",
-							"spans": []
-						},
-						"direction": "ltr"
-					},
-					{
-						"type": "paragraph",
-						"content": {
-							"text": "A simple app that looked like an old school radar notifying them when they were living the 1Km radius could provide enough value. I thought that I had found a simple concept that could spread pretty quickly.",
-							"spans": []
-						},
-						"direction": "ltr"
-					},
-					{
-						"type": "paragraph",
-						"content": {
-							"text": "This application will be my trojan horse to educate about the disease and avoid this spread as much as possible;",
-							"spans": []
-						},
-						"direction": "ltr"
-					},
-					{
-						"type": "paragraph",
-						"content": {
-							"text": "I spent the day looking around React Native, geolocation & Map and ended up with a proof of concept.",
-							"spans": []
-						},
-						"direction": "ltr"
-					},
-					{
-						"type": "paragraph",
-						"content": {
-							"text": "By following the documentation of an excellent plugin and a tutorial that I saw on medium, I managed to display a map, get the current position of my phone and draw a line representing the route that my phone was following.",
-							"spans": []
-						},
-						"direction": "ltr"
+							"text": "Do nulla laboris qui et ad proident qui esse id dolor amet nostrud labore eiusmod. Non laborum eiusmod aliqua magna nulla est qui ipsum culpa consectetur in velit nulla ex cillum."
+						}
 					}
 				]
 			}

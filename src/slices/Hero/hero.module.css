@@ -27,10 +27,19 @@
     padding-right: 40px;
   }
   
+  
   .subtitle {
     font-weight: normal;
     font-size: 1.15rem;
     width: 66%;
+    line-height: 1.55;
+    margin-bottom: 0;
+  }
+
+  .h2subtitle {
+    font-weight: normal;
+    font-size: 1.15rem;
+    width: 100%;
     line-height: 1.55;
     margin-bottom: 0;
   }
