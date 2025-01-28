@@ -328,7 +328,7 @@ export interface ImageSliceDefaultPrimary {
   image: prismic.ImageField<never>;
 
   /**
-   * azeazeza field in *Image → Default → Primary*
+   * Caption field in *Image → Default → Primary*
    *
    * - **Field Type**: Rich Text
    * - **Placeholder**: *None*
