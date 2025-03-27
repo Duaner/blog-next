@@ -34,6 +34,7 @@ export default async function Page({ params }) {
   );
 }
 
+
 export async function generateMetadata({ params }) {
   const client = createClient();
   const page = await client
@@ -43,6 +44,7 @@ export async function generateMetadata({ params }) {
   return {
     title: page.data.meta_title,
     description: page.data.meta_description,
+    images: page.data.meta_image
   };
 }
 
