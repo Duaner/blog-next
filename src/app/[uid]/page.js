@@ -49,6 +49,7 @@ export async function generateMetadata({ params }) {
     },
     openGraph: {
       title: page.data.meta_title,
+      logo: '/images/logo.png',
       description: page.data.meta_description,
       images: page.data.meta_image,
       url : `https://renaudbressand.com/${page.uid}`,
