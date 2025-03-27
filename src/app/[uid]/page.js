@@ -44,10 +44,27 @@ export async function generateMetadata({ params }) {
   return {
     title: page.data.meta_title,
     description: page.data.meta_description,
+    icons: {
+      icon: '/images/logo.png',
+    },
     openGraph: {
       title: page.data.meta_title,
       description: page.data.meta_description,
-      images: page.data.meta_image
+      images: page.data.meta_image,
+      url : `https://renaudbressand.com/${page.uid}`,
+      type: 'article',
+      publishedTime: page.first_publication_date,
+      authors: ['Renaud Bressand'],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: page.data.meta_title,
+      description: page.data.meta_description,
+      images: page.data.meta_image,
+      url : `https://renaudbressand.com/${page.uid}`,
+      type: 'article',
+      publishedTime: page.first_publication_date,
+      authors: ['Renaud Bressand'],
     },
   };
 }
