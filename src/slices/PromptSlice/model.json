@@ -1,0 +1,28 @@
+{
+  "id": "prompt_slice",
+  "type": "SharedSlice",
+  "name": "PromptSlice",
+  "description": "PromptSlice",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "intro_text": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Intro text",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "paragraph,strong,em,hyperlink"
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

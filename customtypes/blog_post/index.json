@@ -17,6 +17,15 @@
         "fieldset": "Slice Zone",
         "config": {
           "choices": {
+            "prompt_slice": {
+              "type": "SharedSlice"
+            },
+            "hero": {
+              "type": "SharedSlice"
+            },
+            "title_and_text": {
+              "type": "SharedSlice"
+            },
             "text": {
               "type": "SharedSlice"
             },
@@ -24,12 +33,6 @@
               "type": "SharedSlice"
             },
             "important_text_and_image": {
-              "type": "SharedSlice"
-            },
-            "title_and_text": {
-              "type": "SharedSlice"
-            },
-            "hero": {
               "type": "SharedSlice"
             }
           }

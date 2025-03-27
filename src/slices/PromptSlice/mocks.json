@@ -1,0 +1,33 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"intro_text": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "I'm trying to build good articles about AI with AI find the prompt here",
+							"spans": [
+								{
+									"type": "hyperlink",
+									"start": 56,
+									"end": 71,
+									"data": {
+										"__TYPE__": "ExternalLink",
+										"url": "http://google.com",
+										"target": "_self"
+									}
+								}
+							]
+						},
+						"direction": "ltr"
+					}
+				]
+			}
+		},
+		"items": []
+	}
+]

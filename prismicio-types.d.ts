@@ -5,11 +5,12 @@ import type * as prismic from "@prismicio/client";
 type Simplify<T> = { [KeyType in keyof T]: T[KeyType] };
 
 type BlogPostDocumentDataBodySlice =
+  | PromptSliceSlice
+  | HeroSlice
+  | TitleAndTextSlice
   | TextSlice
   | ImageSlice
-  | ImportantTextAndImageSlice
-  | TitleAndTextSlice
-  | HeroSlice;
+  | ImportantTextAndImageSlice;
 
 /**
  * Content for blog_post documents
@@ -421,6 +422,51 @@ export type ImportantTextAndImageSlice = prismic.SharedSlice<
 >;
 
 /**
+ * Primary content in *PromptSlice → Default → Primary*
+ */
+export interface PromptSliceSliceDefaultPrimary {
+  /**
+   * Intro text field in *PromptSlice → Default → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: prompt_slice.default.primary.intro_text
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  intro_text: prismic.RichTextField;
+}
+
+/**
+ * Default variation for PromptSlice Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type PromptSliceSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<PromptSliceSliceDefaultPrimary>,
+  never
+>;
+
+/**
+ * Slice variation for *PromptSlice*
+ */
+type PromptSliceSliceVariation = PromptSliceSliceDefault;
+
+/**
+ * PromptSlice Shared Slice
+ *
+ * - **API ID**: `prompt_slice`
+ * - **Description**: PromptSlice
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type PromptSliceSlice = prismic.SharedSlice<
+  "prompt_slice",
+  PromptSliceSliceVariation
+>;
+
+/**
  * Primary content in *Text → Default → Primary*
  */
 export interface TextSliceDefaultPrimary {
@@ -562,6 +608,10 @@ declare module "@prismicio/client" {
       ImportantTextAndImageSliceDefaultPrimary,
       ImportantTextAndImageSliceVariation,
       ImportantTextAndImageSliceDefault,
+      PromptSliceSlice,
+      PromptSliceSliceDefaultPrimary,
+      PromptSliceSliceVariation,
+      PromptSliceSliceDefault,
       TextSlice,
       TextSliceDefaultPrimary,
       TextSliceVariation,
