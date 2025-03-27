@@ -44,7 +44,11 @@ export async function generateMetadata({ params }) {
   return {
     title: page.data.meta_title,
     description: page.data.meta_description,
-    images: page.data.meta_image
+    openGraph: {
+      title: page.data.meta_title,
+      description: page.data.meta_description,
+      images: page.data.meta_image
+    },
   };
 }
 
