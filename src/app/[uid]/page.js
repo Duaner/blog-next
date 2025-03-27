@@ -20,7 +20,15 @@ export default async function Page({ params }) {
       <Heading></Heading>
       <div id="bg-color" className={styles.bgColor} style={{background : page.data.background_color}}></div>
       <div id="blog-main"  className={styles.blogmain}>
-        <SliceZone slices={page.data.body} components={components} context={{"date":page.first_publication_date, "secondary_color":page.data.secondary_color}} />
+        <SliceZone 
+          slices={page.data.body} 
+          components={components} 
+          context={{
+            "date": page.first_publication_date, 
+            "secondary_color": page.data.secondary_color,
+            "background_color": page.data.background_color
+          }} 
+        />
       </div>
     </main>
   );
