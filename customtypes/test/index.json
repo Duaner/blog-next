@@ -1,6 +1,9 @@
 {
   "format": "page",
   "id": "test",
+  "label": "Test",
+  "repeatable": true,
+  "status": true,
   "json": {
     "Main": {
       "uid": {
@@ -10,11 +13,11 @@
         }
       },
       "slices": {
+        "type": "Slices",
+        "fieldset": "Slice Zone",
         "config": {
           "choices": {}
-        },
-        "fieldset": "Slice Zone",
-        "type": "Slices"
+        }
       }
     },
     "SEO & Metadata": {
@@ -44,8 +47,5 @@
         "type": "Image"
       }
     }
-  },
-  "label": "Test",
-  "repeatable": true,
-  "status": true
+  }
 }

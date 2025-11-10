@@ -10,26 +10,15 @@ import styles from './styles.module.css';
  * @param {PromptSliceProps}
  */
 const PromptSlice = ({ slice, context }) => {
-  // Function to darken a color slightly
-  const darkenColor = (color, amount = 0.1) => {
-    if (!color || color === 'inherit' || !color.startsWith('#')) return '#f7f7f7';
-    
-    // Remove the # and convert to RGB
-    const hex = color.slice(1);
-    const rgb = parseInt(hex, 16);
-    
-    const r = Math.max(0, Math.floor(((rgb >> 16) & 0xff) * (1 - amount)));
-    const g = Math.max(0, Math.floor(((rgb >> 8) & 0xff) * (1 - amount)));
-    const b = Math.max(0, Math.floor((rgb & 0xff) * (1 - amount)));
-    
-    return `#${(r << 16 | g << 8 | b).toString(16).padStart(6, '0')}`;
+  const resolveBgColor = (color) => {
+    if (!color || color === 'inherit') {
+      return '#f9f9f9';
+    }
+
+    return color;
   };
 
-  // Darken the background color from context or use a default light gray
-  const bgColor = context?.background_color 
-    ? darkenColor(context.background_color, 0.05) 
-    : '#f9f9f9';
-    
+  const bgColor = resolveBgColor(context?.background_color);
   const textColor = context?.secondary_color || '#666';
 
   return (

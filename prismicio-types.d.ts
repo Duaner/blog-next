@@ -531,6 +531,36 @@ export type PromptSliceSlice = prismic.SharedSlice<
 >;
 
 /**
+ * Default variation for TestSlice Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type TestSliceSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Record<string, never>,
+  never
+>;
+
+/**
+ * Slice variation for *TestSlice*
+ */
+type TestSliceSliceVariation = TestSliceSliceDefault;
+
+/**
+ * TestSlice Shared Slice
+ *
+ * - **API ID**: `test_slice`
+ * - **Description**: TestSlice
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type TestSliceSlice = prismic.SharedSlice<
+  "test_slice",
+  TestSliceSliceVariation
+>;
+
+/**
  * Primary content in *Text → Default → Primary*
  */
 export interface TextSliceDefaultPrimary {
@@ -679,6 +709,9 @@ declare module "@prismicio/client" {
       PromptSliceSliceDefaultPrimary,
       PromptSliceSliceVariation,
       PromptSliceSliceDefault,
+      TestSliceSlice,
+      TestSliceSliceVariation,
+      TestSliceSliceDefault,
       TextSlice,
       TextSliceDefaultPrimary,
       TextSliceVariation,

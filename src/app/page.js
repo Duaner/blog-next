@@ -16,7 +16,14 @@ export default async function Page({ params }) {
     .getSingle("homepage")
     .catch(() => notFound());
 
-  const allBlogs = await client.getAllByType("blog_post");
+  const allBlogs = (await client.getAllByType("blog_post", {
+    orderings: [
+      { field: "document.first_publication_date", direction: "desc" },
+    ],
+  })).sort(
+    (a, b) =>
+      new Date(b.first_publication_date) - new Date(a.first_publication_date),
+  );
   return (
     <ListBlogHome blogs={allBlogs}></ListBlogHome>
   );

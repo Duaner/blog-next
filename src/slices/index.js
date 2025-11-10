@@ -7,6 +7,7 @@ export const components = {
   image: dynamic(() => import("./Image")),
   important_text_and_image: dynamic(() => import("./ImportantTextAndImage")),
   prompt_slice: dynamic(() => import("./PromptSlice")),
+  test_slice: dynamic(() => import("./TestSlice")),
   text: dynamic(() => import("./Text")),
   title_and_text: dynamic(() => import("./TitleAndText")),
 };

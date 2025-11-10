@@ -26,7 +26,7 @@
     "three": "^0.171.0"
   },
   "devDependencies": {
-    "@slicemachine/adapter-next": "^0.3.65",
-    "slice-machine-ui": "^2.12.2"
+    "@slicemachine/adapter-next": "^0.3.77",
+    "slice-machine-ui": "^2.16.0"
   }
 }
