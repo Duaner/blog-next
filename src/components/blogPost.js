@@ -18,6 +18,7 @@ const Blogpost = (data) => {
                   components={components}
                   context={{
                     "date": page.first_publication_date,
+                    "first_publication_date": page.first_publication_date,
                     "secondary_color": page.data.secondary_color,
                     "background_color": page.data.background_color,
                   }}

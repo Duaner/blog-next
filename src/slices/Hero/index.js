@@ -11,8 +11,11 @@ import Moment from "moment";
 
 
 const Hero = ({ slice, context }) => {
-  const secondaryColor = context.secondary_color;
-  const formattedDate = Moment(context.first_publication_date).format("LL");
+  const secondaryColor = context?.secondary_color;
+  const publicationDate = context?.first_publication_date || context?.date;
+  const formattedDate = publicationDate
+    ? Moment(publicationDate).format("LL")
+    : null;
 
   return (
     <section className={styles.container}
@@ -25,11 +28,17 @@ const Hero = ({ slice, context }) => {
       <PrismicRichText field={slice.primary.title} components={RTcomp} />
 
       <div id="date-and-intro" className={styles.dateIntro}>
-        <p id="date" className={styles.date}style={{
-            color: secondaryColor
-        }}>
+        {formattedDate ? (
+          <p
+            id="date"
+            className={styles.date}
+            style={{
+              color: secondaryColor,
+            }}
+          >
             {formattedDate}
-        </p>
+          </p>
+        ) : null}
         <div className={styles.subtitle} style={{ color: secondaryColor }}><PrismicRichText field={slice.primary.subtitle} components={RTcomp} /></div>
       </div>
     </section>
