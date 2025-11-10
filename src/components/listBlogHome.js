@@ -43,10 +43,11 @@ export default function ListBlogHome({ blogs = [], themeColor, highlightColor })
 
   useEffect(() => {
     window.addEventListener('scroll', handleScroll);
+    handleScroll();
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
-  }, []);
+  }, [handleScroll]);
 
   if (!allBlogs.length) {
     return null;
